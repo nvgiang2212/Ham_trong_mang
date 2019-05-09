@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sử dụng hàm trong mảng</title>
+</head>
+<body>
+	<script>
+		let num = prompt("Nhap");
+		let x = num.toString();
+
+		// KHởi tạo biến result là 1 mảng
+		let result = [];
+
+		// Vòng lặp từ 0->x.length để duyệt các phần tử trong mảng vừa nhập
+		for (let i=0; i<x.length; i++) {
+			// Kiểm tra 2 giá trị liên tiếp có chia hết cho 2 hay ko?
+			if(x[i-1]%2===0 && x[i]%2===0) {
+				// Đẩy chuỗi '-' và cộng thêm giá trị chuỗi tiếp theo x[i]
+				result.push('-', x[i]);
+			} else {
+				result.push(x[i]);
+			}
+		}
+
+		// Hiển thị ra mảng result vs method join để ghép các phần tử trong chuỗi lại với nhau
+		document.write(result.join(''));
+
+	</script>
+</body>
+</html>
